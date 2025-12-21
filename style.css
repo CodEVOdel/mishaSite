@@ -1,0 +1,468 @@
+:root {
+    --color: #484848;
+    --accentColor: #005a80;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    background-color: #cbcbcb;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+ul {
+    list-style: none;
+
+}
+
+.view {
+    width: 1140px;
+    background-color: white;
+    padding: 0 15px;
+}
+
+/* ----------------------------- NAVIGATION+MENU ---------------------------- */
+.navigation {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+
+}
+
+.navigation-menu,
+.navigator-social,
+.header-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    /* background-color: gray; */
+    width: 60%;
+
+}
+
+.navigation-menu a {
+    color: var(--color);
+
+}
+
+.navigator-social {
+    justify-content: end;
+    gap: 10px;
+}
+
+.navigator-social img {
+    width: 20px;
+}
+
+/* ------------------------------- HEADER INFO ------------------------------ */
+.header-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--color); */
+    padding: 0 10px;
+    width: 100%;
+}
+
+.header-info--infoData,
+.header-info--logo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    color: var(--color);
+}
+
+.header-info--logo img {
+    height: 64px;
+}
+
+/* .phones{
+    display: flex;
+    align-items: end;
+} */
+.phones a {
+    font-weight: bold;
+    color: var(--color);
+}
+
+
+
+.phones img,
+.addres img {
+    height: 16px;
+}
+
+/* ---------------------------------- BANER --------------------------------- */
+.side-banner {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: #b49b9b; */
+
+}
+
+.side-banner>span {
+    color: var(--color);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.side-banner--content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.baner-content--left>p {
+    margin-top: 10px;
+    margin-left: 35px;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--accentColor);
+    font-weight: bold;
+    padding: 30px 200px 30px 20px;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 80%, 95% 100%, 0% 100%);
+}
+
+.baner-content--right>img {
+    height: 350px;
+    margin: 10px 15px;
+
+}
+
+/* -------------------------------------ICON LIST------------------------------------------ */
+.side-content--icons-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.side-content--icons-item {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #484848; */
+    justify-content: center;
+    align-items: center;
+    color: var(--color);
+
+}
+
+.side-content--icons-item>img {
+    height: 64px;
+    margin-bottom: 10px;
+}
+/* -------------------------- calculate-form--block ------------------------- */
+.calculate-form--block{
+    width: 100%;
+}
+.calculate-form-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accentColor);
+    color: white;
+    padding: 30px 0;
+}
+.calculate-form-title>img{
+    height: 50px;
+    margin-right: 20px;
+}
+.calculate-form-title>span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.calculate-form-table{
+    width: 100%;
+    padding: 20px 30px;
+}
+.calculate-form-table tr{
+    display: flex;
+    justify-content: space-between;
+}
+.calculate-form-table th{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.calculate-form-table th:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.calculate-form-table label{
+    margin-right: 20px;
+}
+
+.suggestions{
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    top: 100%;
+    overflow-y: auto;
+    background-color: #ffffff;
+    list-style: none;
+    /* border: solid var(--accentColor); */
+}
+.suggestions a{
+    cursor: pointer;
+    color: var(--accentColor);
+}
+.suggestions li:hover a{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+}
+.suggestions li:hover{
+    background-color: var(--accentColor);
+}
+
+.calculate-form input{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: solid #cbcbcb;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+.calculate-form input:focus{
+    border:  solid var(--accentColor);
+
+}
+
+.calculate-form button{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 10px;
+    color: var(--accentColor);
+    border:solid var(--accentColor);
+}
+.calculate-form button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: var(--accentColor);
+}
+/* ---------------------------TABLE--------------------------------------- */
+.travel-list--block {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color);
+}
+
+.travel-list--table {
+    width: 100%;
+}
+
+.travel-list--block>span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.travel-table {
+    display: table;
+    width: 100%;
+    /* background-color: aquamarine; */
+
+}
+
+.travel-table thead {
+    background-color: #005a80;
+    color: #cbcbcb;
+    height: 70px;
+    font-size: 1.3rem;
+}
+
+.travel-table tbody>tr {
+    height: 40px;
+}
+
+/* ---------------------------- PHOTO BLOCK GRID ---------------------------- */
+/* .photo-list--block span */
+/* photo-grid */
+/* card-image--title img span */
+
+.photo-list--block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--color);
+}
+
+.photo-list--block>span {
+    font-size: 2rem;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 10px;
+    /* background-color: #005a80; */
+}
+
+.card-image--title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 1px #c7c7c7;
+}
+
+.card-image--title>img {
+    height: 180px;
+}
+
+.card-image--title>span {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+/* -------------------------- service-about--block -------------------------- */
+.service-about--block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--color);
+
+}
+
+.service-about--block>span {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.service-card--item {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30px 1fr;
+    padding: 30px 20px;
+    column-gap: 10px;
+    align-items: center;
+    box-shadow: 5px 5px 5px 1px #c7c7c7;
+    height: 150px;
+}
+
+.service-card--item>img {
+    height: 32px;
+    padding: 5px;
+}
+
+.service-card--item>span {
+    font-weight: 800;
+}
+
+.service-card--item>p {
+    grid-column: 2;
+}
+
+/* ----------------------------- about-as--block ---------------------------- */
+.about-as--block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color);
+    width: 100%;
+}
+
+.about-as--block>span {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+}
+
+.img-left--block {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-right--block {
+    padding: 20px 40px;
+    flex: 1;
+}
+
+.text-right--block>p {
+    line-height: 25px;
+}
+
+.text-right--block>p::first-line {
+    padding-left: 50px;
+    text-indent: 30;
+}
+
+/* --------------------------------- footer --------------------------------- */
+footer {
+    width: 100%;
+    background-color: var(--accentColor);
+    color: white;
+}
+
+.footer-content--block {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom:100px;
+    margin-left: 100px;
+}
+
+.footer-content--block>span {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.footer-content--text {
+    line-height: 1.5rem;
+}
