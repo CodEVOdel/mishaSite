@@ -244,13 +244,79 @@ ul {
 .suggestions li:hover{
     background-color: var(--accentColor);
 }
+th.calculate-form--listSocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.suggestions-social--messengers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3px;
+    position: absolute;
+    top:70px;
+    left: 0;
+    right: 0;
+    /* background-color: white; */
+    color: var(--accentColor);
+}
+.suggestions-social--messengers>li{
+    border: solid var(--accentColor);
+    border-radius: 50%;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+}
+.suggestions-social--messengers>li>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.suggestions-social--messengers img{
+    height: 16px;
+    pointer-events: none;
+}
+.suggestions-social--messengers-hide{
+    display: none;
+}
+
+
+.calculate-form--listSocial{
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    position: relative;
+}
+.listSocial-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid var(--accentColor);
+    width: 100%;
+    height: 100%;
+    color: var(--accentColor);
+    background-color: #ffffff;
+}
+
+.listSocial-button>img{
+    height: 50%;
+    pointer-events: none;
+}
 .calculate-form input{
     margin-top: 15px;
     padding: 10px 20px;
     border: solid #cbcbcb;
     border-radius: 10px;
     font-size: 1.2rem;
+}
+.calculate-form input[type="text"]:last-child{
+    width: 175px;
+    margin-right: 10px;
 }
 .calculate-form input:focus{
     border:  solid var(--accentColor);

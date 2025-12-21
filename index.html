@@ -95,23 +95,22 @@
                                 <label for="driveFrom">Откуда</label>
                                 <input type="text" autocomplete="off" id="driveFrom" name="driveFrom"
                                     placeholder="Город отправления">
-                                <!-- <ul class="suggestions" id="ul_sityList"></ul> -->
                             </th>
                             <th class="travel-input">
                                 <label for="driveTo">Куда</label>
                                 <input type="text" autocomplete="off" id="driveTo" name="driveTo"
-                                placeholder="Город прибытия">
-                                <!-- <ul class="suggestions" id="ul_sityList"></ul> -->
+                                    placeholder="Город прибытия">
+                            </th>
+                            <th style="display: flex;justify-content: center;">
+                                <input type="hidden" id="massager" name="massager">
+                                
+                                <div class="calculate-form--listSocial">
+                                    <a class="listSocial-button" href="#"><img src="assets/icons/ic_call_24px.png" alt=""></a>
+                                </div>
                             </th>
                             <th>
                                 <label for="phoneNumber">Куда Отправить</label>
-                                <input type="text" id="phoneNumber" name="phoneNumber"></th>
-                            <th>
-                                <input type="hidden" id="massager" name="massager">
-
-                                <div class="calculate-form--listSocial">
-
-                                </div>
+                                <input type="text" id="phoneNumber" name="phoneNumber">
                             </th>
 
                             <th><button class="submit-calculate" type="submit">Отправить</button></th>
@@ -325,5 +324,7 @@
     </footer>
 </body>
 <script src="assets/js/classes/PopupMenu.js"></script>
+<script src="assets/js/classes/PopupMessager.js"></script>
 <script src="assets/js/cityHelper.js"></script>
+
 </html>
