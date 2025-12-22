@@ -95,7 +95,7 @@ ul {
     color: var(--color);
 }
 
-.header-info--infoDataХ {
+.header-info--infoData {
     display: flex;
     justify-content: end;
     align-items: center;
