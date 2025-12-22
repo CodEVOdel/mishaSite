@@ -578,3 +578,121 @@ footer {
 .footer-content--text {
     line-height: 1.5rem;
 }
+
+/* ------------------------------- Адаптация ------------------------------ */
+/* ------------------- Планшеты (max-width: 1024px) ------------------- */
+@media (max-width: 1024px) {
+    .view {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .navigation-menu,
+    .navigator-social,
+    .header-info {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .side-banner--content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .baner-content--left>p {
+        padding: 20px 30px 20px 10px;
+        font-size: 1.5rem;
+    }
+
+    .baner-content--right>img {
+        height: 250px;
+    }
+
+    .side-content--icons-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card--item {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .text-right--block {
+        padding: 10px 20px;
+    }
+
+    .calculate-form-table tr {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .calculate-form input[type="text"]:last-child {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* ------------------- Мобильные телефоны (max-width: 600px) ------------------- */
+@media (max-width: 600px) {
+    .view {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .side-banner>span {
+        font-size: 2rem;
+    }
+
+    .baner-content--left>p {
+        font-size: 1.2rem;
+        padding: 15px 20px 15px 10px;
+    }
+
+    .baner-content--right>img {
+        height: 180px;
+    }
+
+    .side-content--icons-item>p {
+        font-size: 0.9rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calculate-form-table th,
+    .calculate-form-table tr {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .calculate-form button {
+        width: 100%;
+    }
+
+    .header-info--logo span {
+        font-size: 0.9rem;
+    }
+
+    .footer-content--block {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 50px;
+    }
+}
