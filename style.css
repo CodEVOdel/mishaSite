@@ -38,6 +38,16 @@ ul {
     width: 1140px;
     background-color: white;
     padding: 0 15px;
+    position: relative;
+}
+
+.header {
+    /* position: fixed;
+    width: 1140px;
+    background-color: white;
+    z-index: 10;
+    left:calc((100vw - 1140px) / 2); */
+
 }
 
 /* ----------------------------- NAVIGATION+MENU ---------------------------- */
@@ -46,6 +56,10 @@ ul {
     width: 100%;
     display: flex;
 
+}
+
+.navigation a:hover {
+    border-bottom: 4px solid var(--accentColor);
 }
 
 .navigation-menu,
@@ -126,7 +140,7 @@ ul {
 
 /* ---------------------------------- BANER --------------------------------- */
 .side-banner {
-    margin-top: 20px;
+    /* margin-top: 150px; */
     display: flex;
     flex-direction: column;
     width: 100%;

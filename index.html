@@ -11,65 +11,71 @@
 
 <body>
     <div class="view">
-        <div class="navigation">
-            <ul class="navigation-menu">
-                <a href="#">
-                    <li>Трансферы</li>
-                </a>
-                <a href="#">
-                    <li>Экскурсии</li>
-                </a>
-                <a href="#">
-                    <li>Оплата и сроки</li>
-                </a>
-                <a href="#">
-                    <li>Трансферы</li>
-                </a>
-                <a href="#">
-                    <li>О Нас</li>
-                </a>
-            </ul>
-            <ul class="navigator-social">
-                <nav> Чат</nav>
-                <a href="bip://chat/+79054450485">
-                    <li> <img src="assets/icons/bip.png" alt=""></li>
-                </a>
-                <a href="https://t.me/+79054450485">
-                    <li> <img src="assets/icons/telegram.png" alt=""></li>
-                </a>
-                <a href="viber://chat?number=+79054450485">
-                    <li><img src="assets/icons/viber2.png" alt=""></li>
-                </a>
-                <a href="https://wa.me/79054450485">
-                    <li><img src="assets/icons/whatsapp.png" alt=""></li>
-                </a>
-                <a href="maxchat://newchat?phone=+79054450485">
-                    <li><img src="assets/icons/Max.png" alt=""></li>
-                </a>
-            </ul>
-        </div>
-        <div class="header-info">
-            <div class="header-info--logo">
-                <img src="assets/img/geografia_clean.png" alt="">
-                <span>Трансфер - поездки в горы, <br>термальные источники,<br> подбор отелей</span>
-            </div>
-            <div class="header-info--infoData">
-                <div class="phones">
-                    <img src="assets/icons/ic_call_24px.png" alt="">
-                    <a href="tel:+79054450485">+ 7 (905) 445-04-85</a>
-                    <span> и </span>
-                    <img src="assets/icons/ic_call_24px.png" alt="">
-                    <a href="tel:+79283407301">+ 7 (928) 340-73-01 </a>
+<div class="header">
+    
+                <div class="navigation">
+                    <ul class="navigation-menu">
+                        <a href="#banner">
+                            <li>Трансферы</li>
+                        </a>
+                        <a href="#calculate">
+                            <li>Расчет стоимости</li>
+                        </a>
+                        <a href="#travel_list">
+                            <li>Все направления</li>
+                        </a>
+                        <a href="#photo">
+                            <li>Фото</li>
+                        </a>
+                        <a href="#service">
+                            <li>Наш сервис</li>
+                        </a>
+                        <a href="#aboutUs">
+                            <li>О Нас</li>
+                        </a>
+                    </ul>
+                    <ul class="navigator-social">
+                        <nav> Чат</nav>
+                        <a href="bip://chat/+79054450485">
+                            <li> <img src="assets/icons/bip.png" alt=""></li>
+                        </a>
+                        <a href="https://t.me/+79054450485">
+                            <li> <img src="assets/icons/telegram.png" alt=""></li>
+                        </a>
+                        <a href="viber://chat?number=+79054450485">
+                            <li><img src="assets/icons/viber2.png" alt=""></li>
+                        </a>
+                        <a href="https://wa.me/79054450485">
+                            <li><img src="assets/icons/whatsapp.png" alt=""></li>
+                        </a>
+                        <a href="maxchat://newchat?phone=+79054450485">
+                            <li><img src="assets/icons/Max.png" alt=""></li>
+                        </a>
+                    </ul>
                 </div>
-                <div class="addres">
-                    <img src="assets/icons/ic_location_on_24px.png" alt="">
-                    <span>
-                        г. Кисловодск ул.Горького / Чкалова, 1 / 75
-                    </span>
+                <div class="header-info">
+                    <div class="header-info--logo">
+                        <img src="assets/img/geografia_clean.png" alt="">
+                        <span>Трансфер - поездки в горы, <br>термальные источники,<br> подбор отелей</span>
+                    </div>
+                    <div class="header-info--infoData">
+                        <div class="phones">
+                            <img src="assets/icons/ic_call_24px.png" alt="">
+                            <a href="tel:+79054450485">+ 7 (905) 445-04-85</a>
+                            <span> и </span>
+                            <img src="assets/icons/ic_call_24px.png" alt="">
+                            <a href="tel:+79283407301">+ 7 (928) 340-73-01 </a>
+                        </div>
+                        <div class="addres">
+                            <img src="assets/icons/ic_location_on_24px.png" alt="">
+                            <span>
+                                г. Кисловодск ул.Горького / Чкалова, 1 / 75
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="side-banner">
+</div>
+        <div class="side-banner" id="banner">
             <span>Трансфер по городу и межгород</span>
             <div class="side-banner--content">
                 <div class="baner-content--left">
@@ -82,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="calculate-form--block">
+        <div class="calculate-form--block" id="calculate">
             <div class="calculate-form-title">
                 <img src="assets/icons/ic_calc.png" alt="">
                 <span>Расчет стоимости</span>
@@ -111,7 +117,8 @@
                             </th>
                             <th>
                                 <label for="phoneNumber">Телефон</label>
-                                <input  type="text"   placeholder="+7(___)___-__-__" autocomplete="tel" id="phoneNumber"  name="phoneNumber">
+                                <input type="text" placeholder="+7(___)___-__-__" autocomplete="tel" id="phoneNumber"
+                                    name="phoneNumber">
                             </th>
 
                             <th><button id="btn_submit_calculate" class="submit-calculate"
@@ -142,7 +149,7 @@
                 <p>Подача авто от 30 минут</p>
             </div>
         </div>
-        <div class="travel-list--block">
+        <div class="travel-list--block" id="travel_list">
             <span>Все направления</span>
             <div class="travel-list--table">
                 <table class="travel-table">
@@ -213,7 +220,7 @@
                 </table>
             </div>
         </div>
-        <div class="photo-list--block">
+        <div class="photo-list--block" id="photo">
             <span>Популярные направления</span>
             <div class="photo-grid">
                 <div class="card-image--title">
@@ -254,8 +261,8 @@
                 </div>
             </div>
         </div>
-        <div class="service-about--block">
-            <span>Нам доверяют</span>
+        <div class="service-about--block" id="service">
+            <span>Наш сервис</span>
             <div class="services-grid">
                 <div class="service-card--item">
                     <img src="assets/icons/ic_accaunt.png" alt="">
@@ -291,7 +298,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-as--block">
+        <div class="about-as--block" id="aboutUs">
             <span>О Нас</span>
             <div class="about-content">
                 <div class="img-left--block">
