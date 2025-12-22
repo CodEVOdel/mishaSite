@@ -64,7 +64,7 @@
                 <div class="addres">
                     <img src="assets/icons/ic_location_on_24px.png" alt="">
                     <span>
-                        г. Кисловодск  ул.Горького / Чкалова, 1 / 75
+                        г. Кисловодск ул.Горького / Чкалова, 1 / 75
                     </span>
                 </div>
             </div>
@@ -102,18 +102,20 @@
                                     placeholder="Город прибытия">
                             </th>
                             <th style="display: flex;justify-content: center;">
-                                <input type="hidden" id="massager" name="massager">
-                                
+                                <input type="hidden" id="massager" name="massager" data-msg="">
+
                                 <div class="calculate-form--listSocial">
-                                    <a class="listSocial-button" href="#"><img src="assets/icons/ic_call_24px.png" alt=""></a>
+                                    <a class="listSocial-button" href="#"><img src="assets/icons/ic_call_24px.png"
+                                            alt=""></a>
                                 </div>
                             </th>
                             <th>
                                 <label for="phoneNumber">Телефон</label>
-                                <input type="text" id="phoneNumber" name="phoneNumber">
+                                <input  type="text"   placeholder="+7(___)___-__-__" autocomplete="tel" id="phoneNumber"  name="phoneNumber">
                             </th>
 
-                            <th><button class="submit-calculate" type="submit">Отправить</button></th>
+                            <th><button id="btn_submit_calculate" class="submit-calculate"
+                                    type="submit">Отправить</button></th>
                         </tr>
                     </tbody>
                 </table>
@@ -212,7 +214,7 @@
             </div>
         </div>
         <div class="photo-list--block">
-            <span>Популярные напра</span>
+            <span>Популярные направления</span>
             <div class="photo-grid">
                 <div class="card-image--title">
                     <img src="assets/img/cardList/arkh_canatka.webp" alt="">
@@ -327,8 +329,10 @@
 
     </footer>
 </body>
-<script src="assets/js/classes/PopupMenu.js"></script>
-<script src="assets/js/classes/PopupMessager.js"></script>
-<script src="assets/js/cityHelper.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript" src="assets/js/classes/MailSender.js"></script>
+<script type="text/javascript" src="assets/js/classes/PopupMenu.js"></script>
+<script type="text/javascript" src="assets/js/classes/PopupMessager.js"></script>
+<script type="text/javascript" src="assets/js/cityHelper.js"></script>
 
 </html>

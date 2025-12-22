@@ -97,11 +97,11 @@ ul {
 
 .header-info--infoData {
     display: flex;
+    flex-direction: column;
     justify-content: end;
     align-items: center;
     gap: 10px;
     color: var(--color);
-    flex-direction: column;
 }
 
 .header-info--logo img {
