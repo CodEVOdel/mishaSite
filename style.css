@@ -58,6 +58,7 @@ ul {
     list-style: none;
     /* background-color: gray; */
     width: 60%;
+    margin-top: 10px;
 
 }
 
@@ -86,13 +87,21 @@ ul {
     width: 100%;
 }
 
-.header-info--infoData,
 .header-info--logo {
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 10px;
     color: var(--color);
+}
+
+.header-info--infoDataХ {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    color: var(--color);
+    flex-direction: column;
 }
 
 .header-info--logo img {
@@ -178,11 +187,13 @@ ul {
     height: 64px;
     margin-bottom: 10px;
 }
+
 /* -------------------------- calculate-form--block ------------------------- */
-.calculate-form--block{
+.calculate-form--block {
     width: 100%;
 }
-.calculate-form-title{
+
+.calculate-form-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,37 +201,44 @@ ul {
     color: white;
     padding: 30px 0;
 }
-.calculate-form-title>img{
+
+.calculate-form-title>img {
     height: 50px;
     margin-right: 20px;
 }
-.calculate-form-title>span{
+
+.calculate-form-title>span {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.calculate-form-table{
+
+.calculate-form-table {
     width: 100%;
     padding: 20px 30px;
 }
-.calculate-form-table tr{
+
+.calculate-form-table tr {
     display: flex;
     justify-content: space-between;
 }
-.calculate-form-table th{
+
+.calculate-form-table th {
     display: flex;
     flex-direction: column;
     align-items: start;
 }
-.calculate-form-table th:last-child{
+
+.calculate-form-table th:last-child {
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
-.calculate-form-table label{
+
+.calculate-form-table label {
     margin-right: 20px;
 }
 
-.suggestions{
+.suggestions {
     position: absolute;
     z-index: 9999;
     left: 0;
@@ -231,67 +249,76 @@ ul {
     list-style: none;
     /* border: solid var(--accentColor); */
 }
-.suggestions a{
+
+.suggestions a {
     cursor: pointer;
     color: var(--accentColor);
 }
-.suggestions li:hover a{
+
+.suggestions li:hover a {
     display: block;
     width: 100%;
     cursor: pointer;
     color: white;
 }
-.suggestions li:hover{
+
+.suggestions li:hover {
     background-color: var(--accentColor);
 }
-th.calculate-form--listSocial{
+
+th.calculate-form--listSocial {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.suggestions-social--messengers{
+.suggestions-social--messengers {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 3px;
     position: absolute;
-    top:70px;
+    top: 70px;
     left: 0;
     right: 0;
     /* background-color: white; */
     color: var(--accentColor);
 }
-.suggestions-social--messengers>li{
+
+.suggestions-social--messengers>li {
     border: solid var(--accentColor);
     border-radius: 50%;
     background-color: white;
     width: 32px;
     height: 32px;
 }
-.suggestions-social--messengers>li>a{
+
+.suggestions-social--messengers>li>a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
 }
-.suggestions-social--messengers img{
+
+.suggestions-social--messengers img {
     height: 16px;
     pointer-events: none;
 }
-.suggestions-social--messengers-hide{
+
+.suggestions-social--messengers-hide {
     display: none;
 }
 
 
-.calculate-form--listSocial{
+.calculate-form--listSocial {
     width: 64px;
     height: 64px;
     text-align: center;
     position: relative;
 }
-.listSocial-button{
+
+.listSocial-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,39 +330,44 @@ th.calculate-form--listSocial{
     background-color: #ffffff;
 }
 
-.listSocial-button>img{
+.listSocial-button>img {
     height: 50%;
     pointer-events: none;
 }
-.calculate-form input{
+
+.calculate-form input {
     margin-top: 15px;
     padding: 10px 20px;
     border: solid #cbcbcb;
     border-radius: 10px;
     font-size: 1.2rem;
 }
-.calculate-form input[type="text"]:last-child{
+
+.calculate-form input[type="text"]:last-child {
     width: 175px;
     margin-right: 10px;
 }
-.calculate-form input:focus{
-    border:  solid var(--accentColor);
+
+.calculate-form input:focus {
+    border: solid var(--accentColor);
 
 }
 
-.calculate-form button{
+.calculate-form button {
     font-size: 1rem;
     font-weight: bold;
     padding: 10px 25px;
     border-radius: 10px;
     color: var(--accentColor);
-    border:solid var(--accentColor);
+    border: solid var(--accentColor);
 }
-.calculate-form button:hover{
+
+.calculate-form button:hover {
     cursor: pointer;
     color: white;
     background-color: var(--accentColor);
 }
+
 /* ---------------------------TABLE--------------------------------------- */
 .travel-list--block {
     margin-top: 30px;
@@ -518,7 +550,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-bottom:100px;
+    margin-bottom: 100px;
     margin-left: 100px;
 }
 
