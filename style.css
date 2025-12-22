@@ -58,7 +58,7 @@ ul {
 
 }
 
-.navigation a:hover {
+.navigation-menu a:hover {
     border-bottom: 4px solid var(--accentColor);
 }
 
