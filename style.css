@@ -35,9 +35,9 @@ ul {
 }
 
 .view {
-    width: 1140px;
+    width: 90%;
     background-color: white;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     position: relative;
 }
 
@@ -73,6 +73,7 @@ ul {
     /* background-color: gray; */
     width: 60%;
     margin-top: 10px;
+    margin-right: 10px;
 
 }
 
@@ -580,7 +581,7 @@ footer {
 }
 
 /* ------------------------------- Адаптация ------------------------------ */
-/* ------------------- Планшеты (max-width: 1024px) ------------------- */
+/*? ------------------- Планшеты (max-width: 1024px) ------------------- */
 @media (max-width: 1024px) {
     .view {
         width: 90%;
@@ -590,13 +591,13 @@ footer {
     .navigation-menu,
     .navigator-social,
     .header-info {
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         gap: 10px;
     }
 
     .side-banner--content {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -609,11 +610,6 @@ footer {
         height: 250px;
     }
 
-    .side-content--icons-list {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -623,7 +619,7 @@ footer {
     }
 
     .service-card--item {
-        grid-template-columns: 1fr;
+        grid-template-columns: 30px 1fr;
         height: auto;
         padding: 20px;
         gap: 10px;
@@ -638,7 +634,8 @@ footer {
     }
 
     .calculate-form-table tr {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 15px;
     }
 
@@ -648,34 +645,66 @@ footer {
     }
 }
 
-/* ------------------- Мобильные телефоны (max-width: 600px) ------------------- */
+/* !------------------- Мобильные телефоны (max-width: 600px) ------------------- */
 @media (max-width: 600px) {
     .view {
         width: 100%;
         padding: 0 5px;
     }
-
-    .side-banner>span {
-        font-size: 2rem;
+    .header-info{
+        flex-direction: column;
+    }
+    .navigation{
+        flex-direction: column;
     }
 
+    .navigation-menu, .navigator-social{
+        flex-direction: row;
+        justify-content: center ;
+    }
+    .navigation-menu{
+        font-size: 0.7rem;
+    }
+    .side-banner>span {
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    .side-banner--content{
+        flex-direction: column;
+    }
+    .baner-content--left{
+        width: 90%;
+
+    }
     .baner-content--left>p {
         font-size: 1.2rem;
-        padding: 15px 20px 15px 10px;
+        padding: 5px 20px 5px 5px;
+        margin-top: 10px;
     }
 
     .baner-content--right>img {
         height: 180px;
     }
-
+    .side-content--icons-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+    }
     .side-content--icons-item>p {
         font-size: 0.9rem;
     }
-
+    .side-content--icons-item>img{
+        height: 32px;
+    }
     .photo-grid {
         grid-template-columns: 1fr;
     }
-
+    .calculate-form-table{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
     .calculate-form-table th,
     .calculate-form-table tr {
         flex-direction: column;
@@ -696,3 +725,7 @@ footer {
         margin-bottom: 50px;
     }
 }
+
+/* 480 - телефон
+768  планшет
+1200 - пк */
