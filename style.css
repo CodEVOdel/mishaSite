@@ -41,14 +41,14 @@ ul {
     position: relative;
 }
 
-.header {
-    /* position: fixed;
+/* .header {
+    position: fixed;
     width: 1140px;
     background-color: white;
     z-index: 10;
-    left:calc((100vw - 1140px) / 2); */
+    left:calc((100vw - 1140px) / 2);
 
-}
+} */
 
 /* ----------------------------- NAVIGATION+MENU ---------------------------- */
 .navigation {
@@ -287,6 +287,9 @@ th.calculate-form--listSocial {
     align-items: center;
 }
 
+.suggestions-social--messengers-hide {
+    display: none;
+}
 .suggestions-social--messengers {
     display: flex;
     flex-direction: column;
@@ -298,6 +301,7 @@ th.calculate-form--listSocial {
     right: 0;
     /* background-color: white; */
     color: var(--accentColor);
+    
 }
 
 .suggestions-social--messengers>li {
@@ -306,6 +310,7 @@ th.calculate-form--listSocial {
     background-color: white;
     width: 32px;
     height: 32px;
+
 }
 
 .suggestions-social--messengers>li>a {
@@ -321,9 +326,6 @@ th.calculate-form--listSocial {
     pointer-events: none;
 }
 
-.suggestions-social--messengers-hide {
-    display: none;
-}
 
 
 .calculate-form--listSocial {
@@ -651,32 +653,40 @@ footer {
         width: 100%;
         padding: 0 5px;
     }
-    .header-info{
-        flex-direction: column;
-    }
-    .navigation{
+
+    .header-info {
         flex-direction: column;
     }
 
-    .navigation-menu, .navigator-social{
-        flex-direction: row;
-        justify-content: center ;
+    .navigation {
+        flex-direction: column;
     }
-    .navigation-menu{
+
+    .navigation-menu,
+    .navigator-social {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation-menu {
         font-size: 0.7rem;
     }
+
     .side-banner>span {
         font-size: 1.5rem;
         text-align: center;
         width: 100%;
     }
-    .side-banner--content{
+
+    .side-banner--content {
         flex-direction: column;
     }
-    .baner-content--left{
+
+    .baner-content--left {
         width: 90%;
 
     }
+
     .baner-content--left>p {
         font-size: 1.2rem;
         padding: 5px 20px 5px 5px;
@@ -686,25 +696,31 @@ footer {
     .baner-content--right>img {
         height: 180px;
     }
-    .side-content--icons-list{
+
+    .side-content--icons-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 30px;
     }
+
     .side-content--icons-item>p {
         font-size: 0.9rem;
     }
-    .side-content--icons-item>img{
+
+    .side-content--icons-item>img {
         height: 32px;
     }
+
     .photo-grid {
         grid-template-columns: 1fr;
     }
-    .calculate-form-table{
+
+    .calculate-form-table {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
     }
+
     .calculate-form-table th,
     .calculate-form-table tr {
         flex-direction: column;

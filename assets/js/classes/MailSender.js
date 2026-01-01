@@ -16,7 +16,7 @@ class MailSender {
             throw new Error("Аргумент должен быть экземпляром MessageMail");
         }
         const tempaleteVars={
-            email:"avakyan.nikolay@gmail.com",
+            email:mail_name,
             subject: mail.subject,
             message: mail.body
         };

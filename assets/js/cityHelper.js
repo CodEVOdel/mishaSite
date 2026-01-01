@@ -1,6 +1,8 @@
 
+const mail_name = "geografiy-kmv@yandex.ru";
 mail = new MessageMail("Запрос цены по направление");
 mailSender = new MailSender("uxqVrA6QswyNAcijQ", "service_hjge704", "template_pq82rgm");
+
 const phone = document.getElementById("phoneNumber");
 const inputMsgSender = document.getElementById("massager");
 const btn_submit = document.getElementById("btn_submit_calculate");
@@ -8,6 +10,7 @@ const inputDriveFrom = document.getElementById("driveFrom");
 const ul_cityList = document.getElementById("ul_sityList");
 const inputDriveTo = document.getElementById("driveTo");
 const inputPhoneNumber = document.getElementById("phoneNumber");
+
 const lstCity = [];
 const resourceApi = fetch(`./assets/jsons/city.json`).
     then(r => r.json()).then(data => {
@@ -37,15 +40,21 @@ function doEmptyInputs() {
 }
     btn_submit.addEventListener("click", (e) => {
         e.preventDefault();
-    
+        e.currentTarget.style.backgroundColor = "#5a5a5aff";
+        e.disabled=true;
         let bodyMessage = `отправить информацию ${inputMsgSender.dataset.msg} по телефону ${phone.value}, \n 
-                                    маршрут из ${inputDriveFrom.value} в ${inputDriveTo.value}`;
+        маршрут из ${inputDriveFrom.value} в ${inputDriveTo.value}`;
         mail.body = bodyMessage;
         if (!isFormValid(phone, inputDriveFrom, inputDriveTo)) {
             alert("Форма заполнена не полностью");
             return;
         }
         mailSender.send(mail).then(() => {
+            console.log(
+                "message send"
+            )
+            e.currentTarget.style.backgroundColor = "#ffffffff";
             doEmptyInputs();
+            e.disabled=false;
         });
     });

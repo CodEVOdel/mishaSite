@@ -7,11 +7,11 @@ class PopupMessager {
         this.inputMsgSender = document.getElementById("massager");
         this.ul_listMassagers = document.createElement("ul");
         this.ul_listMassagers.innerHTML = `
-            <li><a href="#" data-msg="телефон"><img src="assets/icons/ic_call_24px.png"  height="16"></a></li>
-            <li><a href="#" data-msg="В Макс"><img src="assets/icons/Max.png" height="16" ></a></li>
-            <li><a href="#" data-msg="В Ватсап"><img src="assets/icons/whatsapp.png" height="16" ></a></li>
-            <li><a href="#" data-msg="В Вайбер"><img src="assets/icons/viber2.png" height="16" ></a></li>
-            <li><a href="#" data-msg="В Телеграм"><img src="assets/icons/telegram.png" height="16" ></a></li>
+            <li><a href="#" data-msg="телефон"><img src="assets/icons/ic_call_24px.png"  height="16" style="--i:1;"></a></li>
+            <li><a href="#" data-msg="В Макс"><img src="assets/icons/Max.png" height="16" style="--i:1;"></a></li>
+            <li><a href="#" data-msg="В Ватсап"><img src="assets/icons/whatsapp.png" height="16" style="--i:1;"></a></li>
+            <li><a href="#" data-msg="В Вайбер"><img src="assets/icons/viber2.png" height="16" style="--i:1;"></a></li>
+            <li><a href="#" data-msg="В Телеграм"><img src="assets/icons/telegram.png" height="16" style="--i:1;"></a></li>
         `;
         this.linkParent.appendChild(this.ul_listMassagers);
         this.ul_listMassagers.classList.add("suggestions-social--messengers-hide");
@@ -24,8 +24,7 @@ class PopupMessager {
 
         document.addEventListener('click', (e) => {
             if (!this.ul_listMassagers.contains(e.target) && e.target !== this.link) {
-                this.ul_listMassagers.classList.remove("suggestions-social--messengers");
-                this.ul_listMassagers.classList.add("suggestions-social--messengers-hide")
+                this.showMenu()
             }
         });
 
@@ -37,21 +36,24 @@ class PopupMessager {
         e.preventDefault();
         this.ul_listMassagers.classList.remove("suggestions-social--messengers-hide");
         this.ul_listMassagers.classList.add("suggestions-social--messengers")
-        this.li_a = this.ul_listMassagers.querySelectorAll("a");
-        this.li_a.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                e.preventDefault();
-                const img_path = e.currentTarget.querySelector('img');
-                // console.log(img_path.getAttribute("src"));
-                const img_link = this.link.querySelector("img").setAttribute("src", img_path.getAttribute("src"))
-                this.ul_listMassagers.classList.remove("suggestions-social--messengers");
-                this.ul_listMassagers.classList.add("suggestions-social--messengers-hide")
-                this.inputMsgSender.dataset.msg = e.currentTarget.dataset.msg;
-            })
+        this.ul_listMassagers.addEventListener('click', (e) => {
+            const tegA = e.target;
+            if (tegA.tagName != "A") return;
+            e.preventDefault();
+            const img_path = tegA.querySelector('img');
+            this.link.querySelector("img").setAttribute("src", img_path.getAttribute("src"))
+            this.hideMenu();
+            this.inputMsgSender.dataset.msg = tegA.dataset.msg;
         })
 
     }
-    sendMessage(BodyMsg) {
+    showMenu() {
+        this.ul_listMassagers.classList.remove("suggestions-social--messengers");
+        this.ul_listMassagers.classList.add("suggestions-social--messengers-hide")
+    }
 
+    hideMenu() {
+        this.ul_listMassagers.classList.remove("suggestions-social--messengers");
+        this.ul_listMassagers.classList.add("suggestions-social--messengers-hide")
     }
 }
